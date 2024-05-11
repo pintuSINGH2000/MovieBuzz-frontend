@@ -1,0 +1,75 @@
+@import "../../app.scss";
+.empty{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url("../../../public/image/lost.png");
+      position: relative;
+      background-size: cover;
+
+    .top {
+        .wrapper {
+          padding: 20px 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .title{
+            font-size: 35px;
+            color: red;
+            font-family: fantasy;
+            padding-right: 24px;
+          }    
+  
+          @include mobile {
+            padding:20px 15px;
+          }
+    
+          .logo {
+            height: 40px;
+          }
+        }
+      }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        flex-direction: column;
+        .main-heading{
+          font-size: 200px;
+          font-weight: 600;
+          margin-bottom: 0px;
+
+          @include mobile {
+            font-size: 150px;
+          }
+        }
+
+        .main-title{
+            font-size: 100px;
+            font-weight: 300;
+
+            @include mobile {
+                font-size: 50px;
+              }
+        }
+        
+        .main-content{
+            font-size: 25px;
+            margin: 10px;
+            @include mobile {
+                font-size: 15px;
+              }
+        }
+        .empty-btn{
+            background-color: red;
+            padding: 10px;
+            margin: 10px;
+        }
+    }
+}

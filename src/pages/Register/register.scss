@@ -1,0 +1,192 @@
+@import "../../app.scss";
+
+.register {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("../../../public/image/homepage.jpg");
+    position: relative;
+    background-size: cover;
+
+
+    .wrapper {
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 999;
+
+      .title{
+        font-size: 35px;
+        color: red;
+        font-family: fantasy;
+        padding-right: 24px;
+      } 
+      @include mobile {
+        padding:20px 20px;
+      }
+
+      .logo {
+        height: 40px;
+      }
+
+      .loginbutton{
+        background-color: red;
+        border: none;
+        color:white;
+        border-radius: 5px;
+        padding: 5px 15px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+  }
+  .register-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-top:50px;
+
+    @include mobile {
+      text-align: center;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+    h2{
+        margin: 20px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+    
+
+    .payment{
+
+      .payment-customize{
+        margin: 50px;
+        background-color: white;
+        .amount{
+          padding:20px;
+          input{
+            border:1px solid #bfbfbf;
+            width: 100%;
+            padding:15px 0px;
+            font-size: 14px;
+            color: grey;
+           
+          }
+        }
+        
+      }
+      .payment-btn{
+            flex: 3;
+            height: 100%;
+            background-color: red;
+            border: none;
+            color: white;
+            font-size: 22px ;
+            cursor: pointer;
+            margin: 20px 0px;
+            border-radius: 5px;
+            padding: 15px 30px;
+
+            @include mobile {
+              font-size: 13px;
+            }
+      }
+    }
+    .input{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        border-radius: 5px;
+        color:black;
+        p{
+          color: white;
+        }
+
+        @include mobile {
+          width: 80%;
+        }
+
+        input{
+            flex:9;
+            width: 50%;
+            background-color: white;
+            height: 100%;
+            border: none;
+            padding: 15px;
+            margin-top: 10px;
+
+            
+            @include mobile {
+              width: 80%;
+            }
+        }
+
+        .payment-info{
+          color:white;
+          font-weight: 500;
+          margin: 10px;
+          
+        }
+        .payment-plan{
+          display: flex;
+
+          @include mobile {
+            display: block;
+          }
+          .plan{
+            background-color: #e50914;
+            box-shadow: 0 0 3px 0 #e50914;
+            opacity: .6;
+            border-radius: 2px;
+            padding: 10px;
+            margin: 15px;
+            text-align: center;
+            min-width: 9vw;
+            white-space: nowrap;
+          }
+
+          
+          .selected{
+            opacity: 1 !important;
+            box-shadow: 0px 0px 3px 0px #fae3e4;
+          }
+        }
+
+        .registerButton{
+            flex: 3;
+            height: 100%;
+            background-color: red;
+            border: none;
+            color: white;
+            font-size: 22px ;
+            cursor: pointer;
+            margin: 20px 0px;
+            border-radius: 5px;
+            padding: 15px 30px;
+
+            @include mobile {
+              font-size: 13px;
+            }
+        }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@import "../../app.scss";
+@mixin hoverStyles {
+  width: 325px;
+  height: 325px;
+  position: absolute;
+  top: -150px;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07);
+  border-radius: 5px;
+
+  .close-icon {
+    position: absolute;
+    width: 32px;
+    height: 29px;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    border-radius: 18px;
+    padding: 3px 0px 0px 0px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    z-index: 999;
+    display: none;
+
+
+    @include mobile{
+      display: block;
+    }
+    @include tablet{
+      display: block;
+    }
+  }
+  img {
+    height: 165px;
+  }
+
+  .itemInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+    .icons {
+      display: flex;
+      margin-bottom: 10px;
+
+      .icon {
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 50%;
+        margin-right: 10px;
+        font-size: 30px;
+      }
+      .list-icon {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+      }
+    }
+
+    .itemInfoTop {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: gray;
+
+      .limit {
+        border: 1px solid gray;
+        padding: 1px 3px;
+        margin: 0px 10px;
+      }
+    }
+
+    .desc {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .genre {
+      font-size: 14px;
+      color: lightgray;
+    }
+  }
+}
+
+
+.listItem {
+  width: 225px;
+  height: 120px;
+  background-color: var(--main-color);
+  margin-right: 5px;
+  overflow: hidden;
+  color: white;
+
+
+  .close-icon{
+    display: none;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .link video {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      @include hoverStyles;
+    }
+  }
+
+  &.touch {
+    @include hoverStyles;
+    @include mobile {
+      width: 265px;
+      height: 350px;
+    }
+
+    @include tablet {
+      width: 290px;
+      height: 350px;
+    }
+  }
+}

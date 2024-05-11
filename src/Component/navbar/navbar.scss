@@ -1,0 +1,200 @@
+@import "../../app.scss";
+
+.navbar {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+
+  &.scrolled {
+    background-color: var(--main-color);
+  }
+
+
+
+  .container {
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+
+    .left {
+      display: flex;
+      align-items: center;
+      .title{
+        font-size: 35px;
+        color: red;
+        font-family: fantasy;
+        padding-right: 24px;
+      }
+
+
+      img {
+        height: 25px;
+        margin-right: 40px;
+
+      }
+
+      span {
+        margin-right: 20px;
+        cursor: pointer;
+
+        @include tablet {
+          display: none;
+        }
+
+        &.navLink {
+          @include tablet {
+            display: block;
+          }
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      @include mobile {
+        display: none;
+      }
+
+      .search-container {
+        display: inline-block;
+        margin: 10px 10px;
+        position: relative;
+
+        .search-input {
+          position: relative;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          background: white;
+          color: black;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+
+          &:hover {
+            border: 1px solid black;
+          }
+
+          .close-icon{
+            margin-right: 5px;
+          }
+
+          input[type="text"] {
+            width: 100%;
+            padding: 10px 30px 10px 10px;
+            border: none;
+            font-size: 16px;
+            border-radius: 4px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          // span {
+          //   position: absolute;
+          //   top: 50%;
+          //   right: 10px;
+          //   transform: translateY(-50%);
+          // }
+        }
+
+        /* Style for the movie dropdown */
+        .movie-dropdown {
+          list-style: none;
+          padding: 0;
+          max-height: 200px;
+          margin-top:5px;
+          overflow-y: auto;
+          border: 1px solid #ccc;
+          border-top: none;
+          border-radius: 0 0 4px 4px;
+          position: absolute;
+          width: 100%;
+          background-color: #fff;
+          list-style: none;
+          background: white;
+          color: black;
+
+          li {
+            padding: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+
+            &:hover {
+              background-color: #f5f5f5;
+            }
+          }
+
+          .empty-search{
+             display: flex;
+             padding: 10px;
+             font-family: system-ui
+          }
+        }
+      }
+
+      .icon {
+        margin: 0px 15px;
+        cursor: pointer;
+      }
+      img {
+        height: 35px;
+        width: 35px;
+        border-radius: 5px;
+        object-fit: cover;
+        background-color: white;
+      }
+      .username{
+        font-size: 20px;
+        font-family: cursive;
+        font-weight: 900;
+        padding: 5px 0px 10px 5px;
+        text-transform: capitalize;
+    
+      }
+
+      .profile {
+        .options {
+          display: none;
+          background-color: var(--main-color);
+          border-radius: 5px;
+        }
+        
+        span {
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .options {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 40px;
+          }
+        }
+      }
+    }
+
+    .menu-icon{
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+}

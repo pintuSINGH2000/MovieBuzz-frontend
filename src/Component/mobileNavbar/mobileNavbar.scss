@@ -1,0 +1,110 @@
+.m-navbar {
+    position: fixed;
+    color:white;
+    width: 100%;
+    padding: 15px 0px 10px 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    z-index: 999;
+    top: 0;
+
+
+    .close-icon{
+        width: 80%;
+        text-align: right;
+    }
+
+    .m-profile{
+        display: flex;
+        align-items: center;
+        padding: 10px 0px;
+        img {
+            height: 30px;
+            width: 30px;
+            border-radius: 5px;
+            object-fit: cover;
+            cursor: pointer;
+            background-color: white;
+            margin-right: 10px;
+          }
+    }
+
+    .link{
+        padding: 10px 0px;
+    }
+
+    .search-container {
+        display: inline-block;
+        margin: 10px 0px;
+        position: relative;
+
+        .search-input {
+          position: relative;
+          width: 80%;
+          display: flex;
+          align-items: center;
+          background: white;
+          color: black;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+
+          &:hover {
+            border: 1px solid black;
+          }
+
+          .icon{
+            margin-right: 5px;
+          }
+
+          input[type="text"] {
+            width: 100%;
+            padding: 10px 30px 10px 10px;
+            border: none;
+            font-size: 16px;
+            border-radius: 4px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        /* Style for the movie dropdown */
+        .movie-dropdown {
+          list-style: none;
+          padding: 0;
+          max-height: 200px;
+          margin-top:5px;
+          overflow-y: auto;
+          border: 1px solid #ccc;
+          border-top: none;
+          border-radius: 0 0 4px 4px;
+          position: absolute;
+          width: 80%;
+          background-color: #fff;
+          list-style: none;
+          background: white;
+          color: black;
+
+          li {
+            padding: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+
+            &:hover {
+              background-color: #f5f5f5;
+            }
+          }
+
+          .empty-search{
+            display: flex;
+             height: 200px;
+             align-items: center;
+             justify-content: center;
+             font-family: system-ui
+          }
+        }
+      }
+
+}

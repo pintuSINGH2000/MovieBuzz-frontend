@@ -1,0 +1,92 @@
+@import "../../app.scss";
+.mylist-container {
+  background-color: var(--main-color);
+  overflow: hidden;
+  color: white;
+  .mylist {
+    .movie-container {
+      display: flex;
+      flex-direction: column;
+      margin: 50px;
+
+      @include smobile {
+        margin: 20px;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 10px;
+        padding: 10px;
+        @include tablet {
+          grid-template-columns: repeat(2, minmax(250px, 1fr));
+        }
+        @include mobile {
+          grid-template-columns: repeat(1, minmax(250px, 1fr));
+        }
+
+        @include smobile {
+          max-width: 250px;
+        }
+      }
+      .title {
+        color: white;
+        font-size: 32px;
+        font-weight: 500;
+        padding: 20px;
+        margin: auto;
+      }
+    }
+  }
+
+  .empty {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .empty-container {
+      padding: 20px;
+      text-align: center;
+
+      img {
+        max-width: 300px;
+      }
+      .title {
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+      .desc {
+        margin: 15px 0px;
+      }
+
+      .add-movie {
+        background-color: red;
+        padding: 5px 5px;
+        font-weight: 500;
+        list-style: none;
+        text-decoration: none;
+        color: wheat;
+        border-radius: 2px;
+      }
+
+     
+    }
+    
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  }
+}
